@@ -4,6 +4,10 @@ import 'Autoscompactos.dart';
 import 'autosdelujo.dart';
 import 'camionetas.dart';
 import 'vagonetas.dart';
+List<Autoscompactos> autoscompactos = [];
+List<autosdelujo> Autosdelujo = [];
+List<camionetas> Camionetas = [];
+List<vagonetas> Vagonetas = [];
 
 void main(List<String> args) {
 
@@ -75,21 +79,29 @@ void menuCompactos(){
 
 void RegistroCompactos(){
 
+  print(" Ingrese datos :");
+        print(" Serie :");
+              var  res1 = int.parse(stdin.readLineSync().toString());
+        print(" Marca :");
+              var  res2 = stdin.readLineSync().toString();
+        print(" Precio :");
+              var  res3 = int.parse(stdin.readLineSync().toString());
+        print(" Año :");
+              var  res4 = int.parse(stdin.readLineSync().toString());
+
+        Autoscompactos nuevoauto = new Autoscompactos(serie: res1, marca:res2, precio:res3, anio: res4);
+        autoscompactos.add(nuevoauto);
 
 }
 
 void ListarCompactos(){
 
-List<Autoscompactos> autoscompactos = [Autoscompactos(serie: 123, marca: "EcuedorRacing", precio: 4578, anio: 2021)];
-
-  for(var i = 0; i < autoscompactos.length; i++){
-
-    print(i);
-    print(autoscompactos[i].serie);
-    print(autoscompactos[i].marca);
-    print(autoscompactos[i].precio);
-    print(autoscompactos[i].anio);
-  }
+  for (var i = 0; i < autoscompactos.length; i++) {
+  print("Serie :  ${autoscompactos[i].serie}");
+  print("Marca : ${autoscompactos[i].marca}");
+  print("Precio : ${autoscompactos[i].precio}");
+  print("Año : ${autoscompactos[i].anio}");
+}
 menuCompactos();
 }
 
@@ -124,19 +136,30 @@ void menuLujos(){
 
 void RegistroLujos(){
 
+  print(" Ingrese datos :");
+        print(" Serie :");
+              var  res1 = int.parse(stdin.readLineSync().toString());
+        print(" Marca :");
+              var  res2 = stdin.readLineSync().toString();
+        print(" Precio :");
+              var  res3 = int.parse(stdin.readLineSync().toString());
+        print(" Año :");
+              var  res4 = int.parse(stdin.readLineSync().toString());
+
+        autosdelujo nuevoauto = new autosdelujo(serie: res1, marca:res2, precio:res3, anio: res4);
+        Autosdelujo.add(nuevoauto);
+
+
 }
 
 void ListarLujos(){
-  List<autosdelujo> Lujos = [autosdelujo(serie: 123, marca: "EcuedorRacing", precio: 4578, anio: 2021)];
+  for (var i = 0; i < Autosdelujo.length; i++) {
+  print("Serie :  ${Autosdelujo[i].serie}");
+  print("Marca : ${Autosdelujo[i].marca}");
+  print("Precio : ${Autosdelujo[i].precio}");
+  print("Año : ${Autosdelujo[i].anio}");
+}
 
-  for(var i = 0; i < Lujos.length; i++){
-
-    print(i);
-    print(Lujos[i].serie);
-    print(Lujos[i].marca);
-    print(Lujos[i].precio);
-    print(Lujos[i].anio);
-  }
 menuLujos();
 }
 
@@ -171,19 +194,28 @@ void menuVagonetas(){
 
 void RegistroVagonetas(){
 
+  print(" Ingrese datos :");
+        print(" Serie :");
+              var  res1 = int.parse(stdin.readLineSync().toString());
+        print(" Marca :");
+              var  res2 = stdin.readLineSync().toString();
+        print(" Precio :");
+              var  res3 = int.parse(stdin.readLineSync().toString());
+        print(" Año :");
+              var  res4 = int.parse(stdin.readLineSync().toString());
+
+        vagonetas nuevoauto = new vagonetas(serie: res1, marca:res2, precio:res3, anio: res4);
+        Vagonetas.add(nuevoauto);
+
 }
 
 void ListarVagonetas(){
-  List<vagonetas> Vagonetas = [vagonetas(serie: 123, marca: "EcuedorRacing", precio: 4578, anio: 2021)];
-
-  for(var i = 0; i < Vagonetas.length; i++){
-
-    print(i);
-    print(Vagonetas[i].serie);
-    print(Vagonetas[i].marca);
-    print(Vagonetas[i].precio);
-    print(Vagonetas[i].anio);
-  }
+  for (var i = 0; i < Vagonetas.length; i++) {
+  print("Serie :  ${Vagonetas[i].serie}");
+  print("Marca : ${Vagonetas[i].marca}");
+  print("Precio : ${Vagonetas[i].precio}");
+  print("Año : ${Vagonetas[i].anio}");
+}
    menuVagonetas();
 }
 
@@ -215,20 +247,28 @@ void menuCamionetas(){
 }
 
 void RegistroCamionetas(){
+  print(" Ingrese datos :");
+        print(" Serie :");
+              var  res1 = int.parse(stdin.readLineSync().toString());
+        print(" Marca :");
+              var  res2 = stdin.readLineSync().toString();
+        print(" Precio :");
+              var  res3 = int.parse(stdin.readLineSync().toString());
+        print(" Año :");
+              var  res4 = int.parse(stdin.readLineSync().toString());
+
+        camionetas nuevoauto = new camionetas(serie: res1, marca:res2, precio:res3, anio: res4);
+        Camionetas.add(nuevoauto);
 
 }
 
 void ListarCamionetas(){
-  List<camionetas> Camionetas = [camionetas(serie: 123, marca: "EcuedorRacing", precio: 4578, anio: 2021)];
-
-  for(var i = 0; i < Camionetas.length; i++){
-
-    print(i);
-    print(Camionetas[i].serie);
-    print(Camionetas[i].marca);
-    print(Camionetas[i].precio);
-    print(Camionetas[i].anio);
-  }
+ for (var i = 0; i < Camionetas.length; i++) {
+  print("Serie :  ${Camionetas[i].serie}");
+  print("Marca : ${Camionetas[i].marca}");
+  print("Precio : ${Camionetas[i].precio}");
+  print("Año : ${Camionetas[i].anio}");
+}
 menuCamionetas();
 }
 
